@@ -1,21 +1,41 @@
 {
   "name": "sellapp",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "cross-env APP_ENV=development expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "build:android:dev": "eas build -p android --profile developmentEnv"
   },
   "dependencies": {
-    "expo": "~48.0.9",
+    "@react-native-picker/picker": "2.4.8",
+    "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/native": "^6.1.6",
+    "@react-navigation/native-stack": "^6.9.12",
+    "@reduxjs/toolkit": "^1.9.3",
+    "expo": "~48.0.18",
+    "expo-barcode-scanner": "~12.3.2",
+    "expo-dev-client": "~2.2.1",
+    "expo-image-picker": "~14.1.1",
+    "expo-secure-store": "~12.1.1",
+    "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-native": "0.71.4"
+    "react-native": "0.71.8",
+    "react-native-confirmation-code-field": "^7.3.1",
+    "react-native-dotenv": "^3.4.8",
+    "react-native-loading-spinner-overlay": "^3.0.1",
+    "react-native-mask-input": "^1.2.3",
+    "react-native-paper": "^5.5.2",
+    "react-native-safe-area-context": "4.5.0",
+    "react-native-screens": "~3.20.0",
+    "react-native-vector-icons": "^9.2.0",
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "cross-env": "^7.0.3"
   },
   "private": true
 }
